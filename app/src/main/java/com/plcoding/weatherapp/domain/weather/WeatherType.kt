@@ -3,6 +3,8 @@ package com.plcoding.weatherapp.domain.weather
 import androidx.annotation.DrawableRes
 import com.plcoding.weatherapp.R
 
+//    https://codechacha.com/ko/kotlin-sealed-classes/ <- sealed class 설명
+
 sealed class WeatherType(
     val weatherDesc: String,
     @DrawableRes val iconRes: Int
