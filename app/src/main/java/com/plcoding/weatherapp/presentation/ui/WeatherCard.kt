@@ -66,6 +66,32 @@ fun WeatherCard(
                     color = Color.White
                 )
                 Spacer(modifier = Modifier.height(32.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    WeatherDataDisplay(
+                        value = data.pressure.roundToInt(),
+                        unit = "hpa",
+                        icon = ImageVector.vectorResource(id = R.drawable.ic_pressure),
+                        iconTint = Color.White,
+                        textStyle = TextStyle(color = Color.White)
+                    )
+                    WeatherDataDisplay(
+                        value = data.humidity.roundToInt(),
+                        unit = "%",
+                        icon = ImageVector.vectorResource(id = R.drawable.ic_drop),
+                        iconTint = Color.White,
+                        textStyle = TextStyle(color = Color.White)
+                    )
+                    WeatherDataDisplay(
+                        value = data.windSpeed.roundToInt(),
+                        unit = "km/h",
+                        icon = ImageVector.vectorResource(id = R.drawable.ic_wind),
+                        iconTint = Color.White,
+                        textStyle = TextStyle(color = Color.White)
+                    )
+                }
             }
         }
     }
