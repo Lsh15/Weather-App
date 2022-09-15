@@ -11,12 +11,12 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Singleton
 
+@ExperimentalCoroutinesApi
 @Module
 @InstallIn(SingletonComponent::class)
-@ExperimentalCoroutinesApi
 abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindeWeatherRepository(weatherRepositoryImpl: WeatherRepositoryImpl): WeatherRepository
+    abstract fun bindWeatherRepository(weatherRepositoryImpl: WeatherRepositoryImpl): WeatherRepository
 }
