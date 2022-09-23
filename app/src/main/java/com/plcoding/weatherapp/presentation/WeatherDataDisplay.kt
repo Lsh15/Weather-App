@@ -13,7 +13,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.plcoding.weatherapp.R
+import com.plcoding.weatherapp.domain.weather.WeatherData
+import kotlin.math.roundToInt
 
 @Composable
 fun WeatherDataDisplay(
@@ -40,4 +44,16 @@ fun WeatherDataDisplay(
             style = textStyle
         )
     }
+}
+
+@Preview
+@Composable
+fun WeatherDataDisplayPreview(){
+    WeatherDataDisplay(
+        value = 10,
+        unit = "km/h",
+        icon = ImageVector.vectorResource(id = R.drawable.ic_wind),
+        iconTint = Color.White,
+        textStyle = TextStyle(color = Color.White)
+    )
 }
